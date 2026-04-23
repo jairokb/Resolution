@@ -65,6 +65,10 @@ const translations = {
         blog_art5_title: "Como medir o tamanho físico do seu monitor",
         blog_art5_desc: "Não confie apenas no software. Aprenda a medir diagonalmente usando ferramentas simples e entenda o que é PPI.",
         
+        blog_art6_tag: "Gaming",
+        blog_art6_title: "Resolução do Steam Deck: Guia de Otimização",
+        blog_art6_desc: "O console da Valve tem uma resolução única de 1280x800. Aprenda como configurar seus jogos para a melhor performance e nitidez.",
+        
         btn_read_more: "Ler Mais"
     },
     en: {
@@ -132,6 +136,10 @@ const translations = {
         blog_art5_tag: "Tutorial",
         blog_art5_title: "How to measure the physical size of your monitor",
         blog_art5_desc: "Don't rely only on software. Learn to measure diagonally using simple tools and understand what PPI is.",
+        
+        blog_art6_tag: "Gaming",
+        blog_art6_title: "Steam Deck Resolution: Optimization Guide",
+        blog_art6_desc: "Valve's console has a unique 1280x800 resolution. Learn how to set up your games for best performance and clarity.",
         
         btn_read_more: "Read More"
     }
