@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Alterar a Resolução no macOS - ResolutionCheck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="../index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="../blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="../privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl glass rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80" alt="MacBook Retina Display" class="w-full h-80 object-cover">
+        
+        <!-- Portuguese Content -->
+        <div class="p-8 md:p-12" lang="pt">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Como Alterar a Resolução no macOS</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">As telas Retina da Apple são famosas pela clareza, mas às vezes você precisa de mais espaço para trabalhar. O macOS lida com a resolução através do escalonamento visual.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Passo a Passo</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-4">
+                    <li>Clique no menu Apple () e selecione **Ajustes do Sistema**.</li>
+                    <li>No menu lateral, clique em **Telas**.</li>
+                    <li>Escolha entre as opções de ícones (Texto Maior até Mais Espaço).</li>
+                    <li>Para resoluções específicas, clique com o botão direito nos ícones para ver a lista numérica.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Monitores Externos</h2>
+                <p class="mb-6">Ao conectar um monitor 4K externo, selecione o monitor no topo da página de ajustes e escolha o modo HiDPI para garantir que os textos fiquem nítidos e não borrados.</p>
+
+                <div class="mt-10 p-6 bg-yellow-400/20 border-l-4 border-yellow-400 rounded-r-xl">
+                    <p class="opacity-80 italic">O ResolutionCheck reporta o "Viewport", que é a resolução lógica que você escolheu nos ajustes.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Voltar para o Blog</a>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="p-8 md:p-12" lang="en" style="display:none;">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">How to Change the Resolution on macOS</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Apple Retina displays are famous for clarity, but sometimes you need more space to work. macOS handles resolution through visual scaling.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Step by Step</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-4">
+                    <li>Click the Apple menu () and select **System Settings**.</li>
+                    <li>In the sidebar, click **Displays**.</li>
+                    <li>Choose between the icon options (Larger Text to More Space).</li>
+                    <li>For specific resolutions, right-click the icons to see the numeric list.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">External Monitors</h2>
+                <p class="mb-6">When connecting an external 4K monitor, select the monitor at the top of the settings page and choose HiDPI mode to ensure texts are sharp and not blurry.</p>
+
+                <div class="mt-10 p-6 bg-yellow-400/20 border-l-4 border-yellow-400 rounded-r-xl">
+                    <p class="opacity-80 italic">ResolutionCheck reports the "Viewport", which is the logical resolution you chose in the settings.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../lang.js"></script>
+</body>
+</html>

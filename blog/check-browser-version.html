@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como verificar a versão do seu Navegador - ResolutionCheck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="../index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="../blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="../privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl glass rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=1200&q=80" alt="Navegadores Web" class="w-full h-80 object-cover">
+        
+        <!-- Portuguese Content -->
+        <div class="p-8 md:p-12" lang="pt">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Como verificar a versão do seu Navegador</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Manter seu navegador atualizado é uma das medidas de segurança mais importantes que você pode tomar. Além de novos recursos, cada atualização traz correções de vulnerabilidades que protegem seus dados e sua privacidade.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Google Chrome</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Clique nos três pontos verticais no canto superior direito.</li>
+                    <li>Vá em **Ajuda** e selecione **Sobre o Google Chrome**.</li>
+                    <li>O navegador verificará automaticamente por atualizações e mostrará o número da sua versão.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Mozilla Firefox</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Clique no menu de hambúrguer (três linhas) no canto superior direito.</li>
+                    <li>Clique em **Ajuda** e selecione **Sobre o Firefox**.</li>
+                    <li>Uma janela aparecerá e baixará atualizações se necessário.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Safari (macOS)</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Com o Safari aberto, clique em **Safari** na barra de menu superior.</li>
+                    <li>Escolha **Sobre o Safari**.</li>
+                </ol>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">Muitos problemas de "site quebrado" podem ser resolvidos simplesmente atualizando o navegador.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Voltar para o Blog</a>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="p-8 md:p-12" lang="en" style="display:none;">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">How to Check Your Browser Version</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Keeping your browser up to date is one of the most important security measures you can take. In addition to new features, each update brings vulnerability fixes that protect your data and privacy.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Google Chrome</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Click on the three vertical dots in the top right corner.</li>
+                    <li>Go to **Help** and select **About Google Chrome**.</li>
+                    <li>The browser will automatically check for updates and show your version number.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Mozilla Firefox</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Click on the hamburger menu (three lines) in the top right corner.</li>
+                    <li>Click on **Help** and select **About Firefox**.</li>
+                    <li>A window will appear and download updates if necessary.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Safari (macOS)</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>With Safari open, click on **Safari** in the top menu bar.</li>
+                    <li>Choose **About Safari**.</li>
+                </ol>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">Many "broken site" issues can be resolved simply by updating your browser.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../lang.js"></script>
+</body>
+</html>

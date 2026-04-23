@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ResolutionCheck | Tudo sobre Resoluções de Tela</title>
+    <meta name="description" content="Aprenda tudo sobre resoluções de tela, monitores, DPI e como configurar seus dispositivos para a melhor experiência visual.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="blog.html" class="text-yellow-300 font-bold" data-i18n="nav_blog">Blog</a>
+                <a href="privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl">
+        <h1 class="text-4xl font-extrabold mb-10 text-center drop-shadow-lg text-yellow-300" data-i18n="blog_title">Blog & Insights Técnicos</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Artigo 1 -->
+            <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?auto=format&fit=crop&w=800&q=80" alt="Resolução" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-yellow-300" data-i18n="blog_art1_tag">Guia Técnico</span>
+                    <h2 class="text-2xl font-bold mt-2 mb-4" data-i18n="blog_art1_title">Resoluções de Tela Explicadas: Do 720p ao 16K</h2>
+                    <p class="opacity-80 mb-6 text-sm" data-i18n="blog_art1_desc">De smartphones a óculos de realidade aumentada, as resoluções evoluíram. Entenda o que cada sigla significa e como escolher o melhor monitor.</p>
+                    <a href="blog/display-resolution-explained.html" class="inline-block bg-yellow-400 text-purple-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition shadow-lg" data-i18n="btn_read_more">Ler Mais</a>
+                </div>
+            </article>
+
+            <!-- Artigo 2 -->
+            <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=800&q=80" alt="Browser" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-yellow-300" data-i18n="blog_art2_tag">Navegadores</span>
+                    <h2 class="text-2xl font-bold mt-2 mb-4" data-i18n="blog_art2_title">Como verificar a versão do seu Navegador</h2>
+                    <p class="opacity-80 mb-6 text-sm" data-i18n="blog_art2_desc">Sua versão está atualizada para os protocolos de segurança modernos? Veja como conferir no Chrome, Firefox e Safari.</p>
+                    <a href="blog/check-browser-version.html" class="inline-block bg-yellow-400 text-purple-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition shadow-lg" data-i18n="btn_read_more">Ler Mais</a>
+                </div>
+            </article>
+
+            <!-- Artigo 3 -->
+            <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="macOS" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-yellow-300" data-i18n="blog_art3_tag">Apple</span>
+                    <h2 class="text-2xl font-bold mt-2 mb-4" data-i18n="blog_art3_title">Como Alterar a Resolução no macOS (Sequoia/Sonoma)</h2>
+                    <p class="opacity-80 mb-6 text-sm" data-i18n="blog_art3_desc">Ajuste seu display Retina ou Pro Display XDR para máxima produtividade e nitidez.</p>
+                    <a href="blog/change-macos-resolution.html" class="inline-block bg-yellow-400 text-purple-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition shadow-lg" data-i18n="btn_read_more">Ler Mais</a>
+                </div>
+            </article>
+
+            <!-- Artigo 4 -->
+            <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=800&q=80" alt="Windows" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-yellow-300" data-i18n="blog_art4_tag">Windows</span>
+                    <h2 class="text-2xl font-bold mt-2 mb-4" data-i18n="blog_art4_title">Ajustando a Resolução no Windows 11 e 12</h2>
+                    <p class="opacity-80 mb-6 text-sm" data-i18n="blog_art4_desc">Configurando múltiplos monitores e resoluções dinâmicas no sistema da Microsoft.</p>
+                    <a href="blog/change-windows-resolution.html" class="inline-block bg-yellow-400 text-purple-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition shadow-lg" data-i18n="btn_read_more">Ler Mais</a>
+                </div>
+            </article>
+
+            <!-- Artigo 5 -->
+            <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80" alt="Medir" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-yellow-300" data-i18n="blog_art5_tag">Tutorial</span>
+                    <h2 class="text-2xl font-bold mt-2 mb-4" data-i18n="blog_art5_title">Como medir o tamanho físico do seu monitor</h2>
+                    <p class="opacity-80 mb-6 text-sm" data-i18n="blog_art5_desc">Não confie apenas no software. Aprenda a medir diagonalmente usando ferramentas simples e entenda o que é PPI.</p>
+                    <a href="blog/measure-monitor-size.html" class="inline-block bg-yellow-400 text-purple-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition shadow-lg" data-i18n="btn_read_more">Ler Mais</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+        <div class="mt-2 space-x-4">
+            <a href="privacy.html" class="hover:underline" data-i18n="nav_privacy">Privacidade</a>
+            <a href="index.html" class="hover:underline">Home</a>
+        </div>
+    </footer>
+    <script src="lang.js"></script>
+</body>
+</html>

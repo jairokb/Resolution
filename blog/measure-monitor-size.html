@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como medir seu monitor - ResolutionCheck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="../index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="../blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="../privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl glass rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80" alt="Medindo Monitor" class="w-full h-80 object-cover">
+        
+        <!-- Portuguese Content -->
+        <div class="p-8 md:p-12" lang="pt">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Como medir o tamanho físico do seu monitor</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Você comprou um monitor de 24 polegadas mas ele parece menor? Aprender a medir corretamente ajuda a evitar erros na hora da compra e a entender melhor a densidade de pixels (PPI).</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">A Regra da Diagonal</h2>
+                <p class="mb-6">O tamanho dos monitores é sempre medido **diagonalmente**. Isso significa que você deve medir do canto inferior esquerdo até o canto superior direito (ou vice-versa).</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Importante: Não inclua a borda!</h2>
+                <p class="mb-6">Um erro comum é incluir a moldura plástica (bezel) na medição. Você deve medir apenas a **área visível do vidro** onde a imagem aparece.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Conversão para Polegadas</h2>
+                <p class="mb-6">Se você estiver usando uma fita métrica em centímetros, divida o resultado por **2,54** para obter o valor em polegadas.</p>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">A densidade de pixels (PPI) é o que realmente define a nitidez. Um monitor pequeno com alta resolução terá um PPI maior.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Voltar para o Blog</a>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="p-8 md:p-12" lang="en" style="display:none;">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">How to Measure Your Monitor's Physical Size</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Did you buy a 24-inch monitor but it looks smaller? Learning to measure correctly helps avoid buying mistakes and better understand pixel density (PPI).</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">The Diagonal Rule</h2>
+                <p class="mb-6">Monitor size is always measured **diagonally**. This means you should measure from the bottom-left corner to the top-right corner (or vice versa).</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Important: Don't Include the Frame!</h2>
+                <p class="mb-6">A common mistake is to include the plastic frame (bezel) in the measurement. You should only measure the **visible glass area** where the image appears.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Conversion to Inches</h2>
+                <p class="mb-6">If you are using a measuring tape in centimeters, divide the result by **2.54** to get the value in inches.</p>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">Pixel density (PPI) is what really defines sharpness. A small monitor with high resolution will have a higher PPI.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resoluções de Tela Explicadas - ResolutionCheck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="../index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="../blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="../privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl glass rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?auto=format&fit=crop&w=1200&q=80" alt="Monitor" class="w-full h-80 object-cover">
+        
+        <!-- Portuguese Content -->
+        <div class="p-8 md:p-12" lang="pt">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Guia de Resoluções de Tela: Do HD ao Ultra 16K</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">A forma como consumimos conteúdo visual mudou drasticamente. No centro de tudo isso, está a **resolução de tela**.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">1. O que é Resolução de Tela?</h2>
+                <p class="mb-6">A resolução é a quantidade de pixels que compõem a imagem na tela. Um pixel é o menor elemento de uma imagem digital.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">2. Full HD (1080p) e 2K (QHD)</h2>
+                <p class="mb-6">O Full HD (1920x1080) ainda é o padrão básico. O 2K (2560x1440) é o ponto ideal para monitores de 27 polegadas.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">3. 4K Ultra HD (3840x2160)</h2>
+                <p class="mb-6">O 4K é o padrão de ouro para streaming e trabalho profissional, com quatro vezes mais pixels que o Full HD.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">4. O Futuro: 8K e 16K</h2>
+                <p class="mb-6">O 8K já está presente em TVs grandes, mas o 16K é o limite para simulações imersivas e cinema.</p>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20 flex justify-between items-center">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Voltar para o Blog</a>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="p-8 md:p-12" lang="en" style="display:none;">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Screen Resolution Guide: From HD to Ultra 16K</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">The way we consume visual content has changed drastically. At the center of it all is **screen resolution**.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">1. What is Screen Resolution?</h2>
+                <p class="mb-6">Resolution is the number of pixels that make up the image on the screen. A pixel is the smallest element of a digital image.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">2. Full HD (1080p) and 2K (QHD)</h2>
+                <p class="mb-6">Full HD (1920x1080) is still the basic standard. 2K (2560x1440) is the sweet spot for 27-inch monitors.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">3. 4K Ultra HD (3840x2160)</h2>
+                <p class="mb-6">4K is the gold standard for streaming and professional work, with four times more pixels than Full HD.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">4. The Future: 8K and 16K</h2>
+                <p class="mb-6">8K is already present on large TVs, but 16K is the limit for immersive simulations and cinema.</p>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20 flex justify-between items-center">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../lang.js"></script>
+</body>
+</html>

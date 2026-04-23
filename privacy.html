@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - ResolutionCheck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        h2 { font-size: 1.5rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem; color: #facc15; }
+        p { margin-bottom: 1rem; opacity: 0.9; }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="privacy.html" class="text-yellow-300 font-bold" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl glass rounded-3xl p-8 md:p-12">
+        <!-- Portuguese Content -->
+        <div lang="pt">
+            <h1 class="text-4xl font-extrabold mb-8">Política de Privacidade</h1>
+            <p class="text-lg mb-8">Bem-vindo ao ResolutionCheck. Sua privacidade é nossa prioridade absoluta.</p>
+            <h2>1. Coleta de Dados</h2>
+            <p>Nós **não** coletamos informações de identificação pessoal (PII). Nossa ferramenta funciona inteiramente no lado do cliente (Client-side), o que significa que os dados de resolução são processados no seu navegador e não são enviados para nossos servidores.</p>
+            <h2>2. Cookies e Rastreamento</h2>
+            <p>Utilizamos apenas cookies essenciais para garantir que suas preferências de design e idioma sejam salvas. Não utilizamos rastreadores de terceiros para publicidade invasiva.</p>
+            <h2>3. Conformidade Global</h2>
+            <p>Estamos em conformidade total com a **LGPD (Brasil)** e **GDPR (Europa)**. Respeitamos o sinal "Do Not Track" do seu navegador.</p>
+            <h2>4. Transparência</h2>
+            <p>O código fonte desta ferramenta é focado em transparência, garantindo que o que você vê é exatamente o que está acontecendo no seu dispositivo.</p>
+            <div class="mt-12 pt-8 border-t border-white/20 text-center">
+                <a href="index.html" class="bg-yellow-400 text-purple-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition inline-block">Voltar para a Home</a>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div lang="en" style="display:none;">
+            <h1 class="text-4xl font-extrabold mb-8">Privacy Policy</h1>
+            <p class="text-lg mb-8">Welcome to ResolutionCheck. Your privacy is our top priority.</p>
+            <h2>1. Data Collection</h2>
+            <p>We **do not** collect personally identifiable information (PII). Our tool works entirely on the client-side, meaning screen resolution data is processed in your browser and not sent to our servers.</p>
+            <h2>2. Cookies and Tracking</h2>
+            <p>We only use essential cookies to ensure your design and language preferences are saved. We do not use third-party trackers for invasive advertising.</p>
+            <h2>3. Global Compliance</h2>
+            <p>We are in full compliance with **LGPD (Brazil)** and **GDPR (Europe)**. We respect your browser's "Do Not Track" signal.</p>
+            <h2>4. Transparency</h2>
+            <p>The source code of this tool is focused on transparency, ensuring that what you see is exactly what is happening on your device.</p>
+            <div class="mt-12 pt-8 border-t border-white/20 text-center">
+                <a href="index.html" class="bg-yellow-400 text-purple-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition inline-block">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+    </footer>
+    <script src="lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustando a Resolução no Windows - ResolutionCheck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="../index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="../blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="../privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl glass rounded-3xl overflow-hidden shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1200&q=80" alt="Setup Windows" class="w-full h-80 object-cover">
+        
+        <!-- Portuguese Content -->
+        <div class="p-8 md:p-12" lang="pt">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Como Alterar a Resolução no Windows 11 e 12</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Seja para jogos ou trabalho, gerenciar a resolução no Windows é essencial. Nas versões mais recentes, o processo é intuitivo mas esconde opções avançadas.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">O Caminho Padrão</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Clique com o botão direito na Área de Trabalho e selecione **Configurações de exibição**.</li>
+                    <li>Vá até **Resolução da tela** e escolha a opção desejada (prefira a "Recomendável").</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Escala e Layout</h2>
+                <p class="mb-6">Se tudo parecer pequeno demais em 4K, ajuste a **Escala** para 125% ou 150% em vez de diminuir a resolução. Isso mantém a nitidez máxima do painel.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Múltiplos Monitores</h2>
+                <p class="mb-6">O Windows permite configurar cada tela de forma independente. Clique no diagrama do monitor que deseja ajustar antes de mudar as configurações.</p>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">Use o ResolutionCheck para validar se o Windows está entregando a resolução nativa do seu hardware.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Voltar para o Blog</a>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="p-8 md:p-12" lang="en" style="display:none;">
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">How to Change Resolution on Windows 11 and 12</h1>
+            <article class="prose prose-invert max-w-none text-lg leading-relaxed">
+                <p class="mb-6">Whether for gaming or work, managing resolution in Windows is essential. In recent versions, the process is intuitive but hides advanced options.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">The Standard Path</h2>
+                <ol class="list-decimal ml-6 mb-6 space-y-2">
+                    <li>Right-click on the Desktop and select **Display settings**.</li>
+                    <li>Go to **Display resolution** and choose the desired option (prefer "Recommended").</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Scale and Layout</h2>
+                <p class="mb-6">If everything looks too small in 4K, adjust the **Scale** to 125% or 150% instead of lowering the resolution. This maintains maximum panel sharpness.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">Multiple Monitors</h2>
+                <p class="mb-6">Windows allows you to configure each screen independently. Click on the monitor diagram you want to adjust before changing the settings.</p>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">Use ResolutionCheck to validate if Windows is delivering your hardware's native resolution.</p>
+                </div>
+            </article>
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../lang.js"></script>
+</body>
+</html>

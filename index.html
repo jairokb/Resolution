@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is my screen resolution? - Qual a minha resolução de tela</title>
+    <meta name="description" content="Descubra qual a sua resolução de tela agora mesmo. Ferramenta gratuita para identificar tamanho de tela, viewport, DPI e proporção. O que é minha resolução de tela?">
+    <meta name="keywords" content="what is my screen size, qual a minha resolução, screen resolution checker, tamanho da tela em pixels, viewport size, display resolution">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .copy-toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+        .copy-toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @-webkit-keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @-webkit-keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body class="text-white font-sans flex flex-col items-center p-4 md:p-10">
+
+    <nav class="w-full max-w-4xl flex justify-between items-center mb-10 p-4 glass rounded-2xl">
+        <a href="index.html" class="text-2xl font-bold tracking-tight">Resolution<span class="text-yellow-300">Check</span></a>
+        <div class="flex items-center space-x-6">
+            <div class="space-x-4 border-r border-white/20 pr-6 mr-2 hidden md:block">
+                <a href="blog.html" class="hover:text-yellow-300 transition" data-i18n="nav_blog">Blog</a>
+                <a href="privacy.html" class="hover:text-yellow-300 transition" data-i18n="nav_privacy">Privacidade</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm">
+                <button class="lang-btn hover:text-yellow-300 transition" data-lang="pt">PT</button>
+                <span class="opacity-30">|</span>
+                <button class="lang-btn hover:text-yellow-300 transition opacity-50" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg" data-i18n="hero_title">
+            Sua Resolução de Tela é:
+        </h1>
+
+        <div class="glass rounded-3xl p-8 md:p-12 mb-10 relative group">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="text-center">
+                    <p class="text-xl opacity-80 uppercase tracking-widest font-semibold" data-i18n="label_width">Largura</p>
+                    <p id="screenWidth" class="text-6xl md:text-8xl font-black text-yellow-300">0</p>
+                    <p class="text-sm mt-2 opacity-60" data-i18n="label_pixels">pixels (px)</p>
+                </div>
+                <div class="text-5xl font-bold hidden md:block opacity-40">×</div>
+                <div class="text-center">
+                    <p class="text-xl opacity-80 uppercase tracking-widest font-semibold" data-i18n="label_height">Altura</p>
+                    <p id="screenHeight" class="text-6xl md:text-8xl font-black text-yellow-300">0</p>
+                    <p class="text-sm mt-2 opacity-60" data-i18n="label_pixels">pixels (px)</p>
+                </div>
+            </div>
+            
+            <button id="copyBtn" class="mt-8 bg-yellow-400 text-purple-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-xl flex items-center gap-2 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+                <span data-i18n="btn_copy">Copiar Resolução</span>
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div class="glass rounded-2xl p-6 space-y-4">
+                <h2 class="text-2xl font-bold border-b border-white/20 pb-2 mb-4 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 21h6l-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span data-i18n="info_device_title">Informações do Dispositivo</span>
+                </h2>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_real_res">Resolução Real:</span>
+                    <span id="deviceRes" class="font-mono font-bold text-yellow-200">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_avail_area">Área Disponível:</span>
+                    <span id="innerRes" class="font-mono font-bold">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_dpr">DPR (Device Pixel Ratio):</span>
+                    <span id="dpr" class="font-mono font-bold">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_color_depth">Profundidade de Cor:</span>
+                    <span id="colorDepth" class="font-mono font-bold">---</span>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 space-y-4">
+                <h2 class="text-2xl font-bold border-b border-white/20 pb-2 mb-4 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                    <span data-i18n="info_browser_title">Janela do Navegador</span>
+                </h2>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_view_w">Viewport (Largura):</span>
+                    <span id="viewW" class="font-mono font-bold">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_view_h">Viewport (Altura):</span>
+                    <span id="viewH" class="font-mono font-bold">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_aspect">Proporção (Aspect Ratio):</span>
+                    <span id="aspectRatio" class="font-mono font-bold">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="opacity-70" data-i18n="info_nav_res">Resolução do Navegador:</span>
+                    <span id="finalRes" class="font-mono font-bold text-yellow-300">---</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-16 text-left glass rounded-3xl p-8 md:p-12 prose prose-invert max-w-none shadow-2xl">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-300 italic underline" data-i18n="guide_title">Guia Completo: Qual a minha resolução de tela?</h2>
+            <p class="opacity-90 leading-relaxed text-lg mb-6" data-i18n="guide_p1">
+                Muitas pessoas se perguntam: **"como saber o tamanho da minha tela?"** ou **"qual é a minha resolução atual?"**. Entender essas métricas é fundamental para designers, desenvolvedores de sites, gamers e até para quem deseja comprar um novo monitor.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4" data-i18n="guide_q1">O que é Resolução de Tela?</h3>
+                    <p class="opacity-80" data-i18n="guide_a1">
+                        A resolução de tela refere-se ao número de pixels (pequenos pontos de luz) que compõem a imagem no seu monitor. Quanto maior o número de pixels, maior a nitidez e o espaço de trabalho.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4" data-i18n="guide_q2">Diferença entre Resolução e Viewport</h3>
+                    <p class="opacity-80" data-i18n="guide_a2">
+                        Enquanto a resolução de tela é o limite físico do seu hardware, o Viewport é a área visível dentro do seu navegador. Devido a barras de ferramentas, o Viewport costuma ser menor.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold mb-4" data-i18n="guide_q3">Por que minha resolução parece diferente? (DPR)</h3>
+            <p class="opacity-80 mb-6" data-i18n="guide_a3">
+                Em dispositivos modernos, o sistema agrupa vários pixels físicos para formar um único pixel lógico (DPR), tornando tudo mais nítido sem ficar minúsculo.
+            </p>
+
+            <div class="bg-white/10 p-6 rounded-2xl border-l-4 border-yellow-300">
+                <h4 class="font-bold text-xl mb-2" data-i18n="guide_tip_title">Dica Pro para AdSense e Criadores:</h4>
+                <p class="opacity-80 italic" data-i18n="guide_tip_text">
+                    Ao criar conteúdo visual, sempre verifique a proporção (Aspect Ratio). As mais comuns são 16:9 e 21:9.
+                </p>
+            </div>
+        </section>
+
+        <section class="mt-16 text-left w-full">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-i18n="recent_articles">Artigos Técnicos sobre Displays</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="blog/display-resolution-explained.html" class="glass rounded-2xl overflow-hidden hover:scale-105 transition-transform group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?auto=format&fit=crop&w=400&q=80" alt="Resolução de Tela" class="w-full h-40 object-cover group-hover:scale-110 transition-duration-500">
+                        <div class="absolute top-2 left-2 bg-yellow-400 text-purple-900 text-xs font-bold px-2 py-1 rounded" data-i18n="card_1_tag">GUIA</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-i18n="card_1_title">Resoluções de Tela Explicadas: Do HD ao 16K</h3>
+                        <p class="text-sm opacity-70" data-i18n="card_1_desc">Entenda as diferenças entre resoluções e o que esperar do futuro das telas.</p>
+                    </div>
+                </a>
+                <a href="blog/measure-monitor-size.html" class="glass rounded-2xl overflow-hidden hover:scale-105 transition-transform group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400&q=80" alt="Monitor" class="w-full h-40 object-cover group-hover:scale-110 transition-duration-500">
+                        <div class="absolute top-2 left-2 bg-yellow-400 text-purple-900 text-xs font-bold px-2 py-1 rounded" data-i18n="card_2_tag">TUTORIAL</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-i18n="card_2_title">Como medir seu monitor corretamente</h3>
+                        <p class="text-sm opacity-70" data-i18n="card_2_desc">Aprenda a calcular as polegadas reais do seu visor de forma simples.</p>
+                    </div>
+                </a>
+                <a href="blog.html" class="glass rounded-2xl flex flex-col items-center justify-center p-4 hover:bg-white/10 transition border-2 border-dashed border-white/20">
+                    <span class="text-yellow-300 font-bold text-lg" data-i18n="card_all_blog">Explorar Blog Completo &rarr;</span>
+                    <p class="text-xs opacity-50 mt-2 text-center" data-i18n="card_all_desc">Mais de 30 guias técnicos e dicas</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-16 mb-10 text-center opacity-70 text-sm">
+        <p data-i18n="footer_rights">&copy; 2026 ResolutionCheck. Todos os direitos reservados.</p>
+        <div class="mt-2 space-x-4">
+            <a href="privacy.html" class="hover:underline" data-i18n="nav_privacy">Privacidade</a>
+            <a href="index.html" class="hover:underline">Home</a>
+        </div>
+    </footer>
+
+    <div id="toast" class="copy-toast">Resolução copiada para a área de transferência!</div>
+
+    <script src="lang.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
