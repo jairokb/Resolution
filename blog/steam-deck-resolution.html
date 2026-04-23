@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resolução do Steam Deck: Guia de Otimização - ResolutionCheck</title>
-    <meta name="description" content="Tudo sobre a resolução de 1280x800 do Steam Deck. Como otimizar seus jogos, usar o FSR e configurar monitores externos.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
@@ -32,40 +31,54 @@
         
         <!-- Portuguese Content -->
         <div class="p-8 md:p-12" lang="pt">
-            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Resolução do Steam Deck: Guia de Otimização para Gamers</h1>
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Resolução do Steam Deck: Guia Completo de Otimização</h1>
             <article class="prose prose-invert max-w-none text-lg leading-relaxed">
-                <p class="mb-6">O Steam Deck da Valve revolucionou o mercado de consoles portáteis. No entanto, sua tela possui uma resolução e proporção pouco comuns que exigem atenção especial.</p>
-                
-                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">1. A Resolução Nativa: 1280x800</h2>
-                <p class="mb-6">Diferente da maioria dos monitores 16:9, o Steam Deck usa uma proporção de **16:10**. Isso significa que ele tem um pouco mais de espaço vertical. Ao jogar, certifique-se de selecionar 1280x800 para evitar barras pretas ou imagens esticadas.</p>
+                <p class="mb-6">O Steam Deck, console portátil da Valve, trouxe o poder do PC Gaming para as nossas mãos. No entanto, para extrair a melhor performance e qualidade visual, é fundamental entender como sua tela de 7 ou 7.4 polegadas funciona.</p>
 
-                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">2. Usando o AMD FSR para Performance</h2>
-                <p class="mb-6">Se um jogo for muito pesado, você pode baixar a resolução interna (ex: 540p) e ativar o **FSR (FidelityFX Super Resolution)** no menu de performance do console. Isso reconstrói a imagem para 800p com ganho de FPS.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">1. A Resolução Nativa e a Proporção 16:10</h2>
+                <p class="mb-6">Diferente das TVs e monitores padrão (16:9), o Steam Deck usa uma proporção de **16:10** com resolução nativa de **1280x800**. Essa escolha da Valve oferece um pouco mais de espaço vertical, o que é ótimo para navegação e menus. Ao rodar um jogo, sempre procure pela opção 1280x800 nas configurações para evitar barras pretas no topo e na base da tela.</p>
 
-                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">3. Monitores Externos e Docking</h2>
-                <p class="mb-6">Ao conectar o Deck em uma TV 4K, o console pode tentar rodar nativamente nessa resolução, o que destruirá a performance. Recomendamos configurar a saída para 1080p e deixar a TV fazer o upscaling.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">2. AMD FSR: O Segredo da Performance</h2>
+                <p class="mb-6">Um dos recursos mais poderosos do Steam Deck é o **AMD FidelityFX Super Resolution (FSR)** integrado ao sistema. Se um jogo pesado (como Cyberpunk 2077 ou Elden Ring) estiver rodando com baixo FPS, você pode diminuir a resolução interna para algo como 960x600 e ativar o FSR no menu de acesso rápido do console (botão "..."). O sistema irá "reconstruir" os pixels para 800p, mantendo uma imagem nítida com muito mais fluidez.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">3. Taxas de Atualização Dinâmicas (40Hz / 45Hz)</h2>
+                <p class="mb-6">A tela do Steam Deck original (LCD) permite mudar a taxa de atualização para **40Hz**, o que cria um "meio termo" perfeito entre a economia de bateria dos 30fps e a fluidez dos 60fps. No modelo **OLED**, essa taxa pode chegar a 90Hz, oferecendo uma experiência ainda mais suave. Ajustar a taxa de atualização para ser múltiplo do seu FPS é a chave para eliminar o *stuttering* (engasgos).</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">4. Modo Docked: TVs e Monitores Externos</h2>
+                <p class="mb-6">Ao conectar o Steam Deck em uma TV 4K, o console pode tentar enviar um sinal 4K nativo. **Não faça isso!** A APU do Deck não é potente o suficiente para renderizar jogos modernos em 4K. A melhor estratégia é configurar a saída do sistema para **1080p** e deixar a tecnologia de upscaling da sua TV cuidar do resto.</p>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">O **ResolutionCheck** ajuda você a validar se o seu navegador no Steam Deck está operando na proporção correta de 16:10 ou se está simulando um ambiente desktop.</p>
+                </div>
             </article>
-            <div class="mt-12 pt-8 border-t border-white/20 flex justify-between items-center">
+            <div class="mt-12 pt-8 border-t border-white/20">
                 <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Voltar para o Blog</a>
             </div>
         </div>
 
         <!-- English Content -->
         <div class="p-8 md:p-12" lang="en" style="display:none;">
-            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Steam Deck Resolution: Optimization Guide for Gamers</h1>
+            <h1 class="text-4xl font-extrabold mb-6 text-yellow-300">Steam Deck Resolution: The Complete Optimization Guide</h1>
             <article class="prose prose-invert max-w-none text-lg leading-relaxed">
-                <p class="mb-6">Valve's Steam Deck has revolutionized the handheld console market. However, its screen has an unusual resolution and aspect ratio that require special attention.</p>
-                
-                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">1. Native Resolution: 1280x800</h2>
-                <p class="mb-6">Unlike most 16:9 monitors, the Steam Deck uses a **16:10** aspect ratio. This means it has a bit more vertical space. When playing, make sure to select 1280x800 to avoid black bars or stretched images.</p>
+                <p class="mb-6">The Steam Deck, Valve's handheld console, brought the power of PC Gaming to our hands. However, to extract the best performance and visual quality, it's essential to understand how its 7 or 7.4-inch screen works.</p>
 
-                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">2. Using AMD FSR for Performance</h2>
-                <p class="mb-6">If a game is too heavy, you can lower the internal resolution (e.g., 540p) and activate **FSR (FidelityFX Super Resolution)** in the console's performance menu. This reconstructs the image to 800p with an FPS boost.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">1. Native Resolution and 16:10 Aspect Ratio</h2>
+                <p class="mb-6">Unlike standard TVs and monitors (16:9), the Steam Deck uses a **16:10** aspect ratio with a native resolution of **1280x800**. Valve's choice offers a bit more vertical space, which is great for navigation and menus. When running a game, always look for the 1280x800 option in the settings to avoid black bars at the top and bottom of the screen.</p>
 
-                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">3. External Monitors and Docking</h2>
-                <p class="mb-6">When connecting the Deck to a 4K TV, the console might try to run natively at that resolution, which will kill performance. We recommend setting the output to 1080p and letting the TV handle the upscaling.</p>
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">2. AMD FSR: The Secret to Performance</h2>
+                <p class="mb-6">One of the Steam Deck's most powerful features is the system-integrated **AMD FidelityFX Super Resolution (FSR)**. If a demanding game (like Cyberpunk 2077 or Elden Ring) is running at low FPS, you can lower the internal resolution to something like 960x600 and activate FSR in the console's quick access menu ("..." button). The system will "reconstruct" the pixels to 800p, maintaining a sharp image with much more fluidity.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">3. Dynamic Refresh Rates (40Hz / 45Hz)</h2>
+                <p class="mb-6">The original Steam Deck (LCD) screen allows changing the refresh rate to **40Hz**, creating a perfect "middle ground" between 30fps battery savings and 60fps fluidity. On the **OLED** model, this rate can reach 90Hz, offering an even smoother experience. Adjusting the refresh rate to be a multiple of your FPS is the key to eliminating stuttering.</p>
+
+                <h2 class="text-2xl font-bold mt-10 mb-4 text-yellow-200">4. Docked Mode: TVs and External Monitors</h2>
+                <p class="mb-6">When connecting the Steam Deck to a 4K TV, the console might try to send a native 4K signal. **Don't do it!** The Deck's APU is not powerful enough to render modern games at 4K. The best strategy is to set the system output to **1080p** and let your TV's upscaling technology handle the rest.</p>
+
+                <div class="mt-10 p-6 bg-white/10 border-l-4 border-yellow-300 rounded-r-xl">
+                    <p class="opacity-80 italic">**ResolutionCheck** helps you validate if your browser on Steam Deck is operating at the correct 16:10 aspect ratio or if it's simulating a desktop environment.</p>
+                </div>
             </article>
-            <div class="mt-12 pt-8 border-t border-white/20 flex justify-between items-center">
+            <div class="mt-12 pt-8 border-t border-white/20">
                 <a href="../blog.html" class="text-yellow-300 hover:underline font-bold">&larr; Back to Blog</a>
             </div>
         </div>
